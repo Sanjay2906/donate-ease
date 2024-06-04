@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  *{
+    padding:0;
+    margin:0;
+    font-family: 'Josefin Sans',sans-serif;
+    box-sizing:border-box;
+}
+.haa{
+    height:100vh;
+    width:100%;
+    background-size: cover;
+    background-position: center;
+}nav{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 45px;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+.logo{
+    color:black;
+    font-size: 35px;
+    letter-spacing: 1px;
+    cursor:pointer;
+    text-transform: uppercase;
+}
+span{
+    color:#f9004d;
+}
+nav ul li{
+    list-style-type:none;
+    display: inline-block;
+    padding:10px 25px
+}
+nav ul li a{
+    color:black;
+    text-decoration: none;
+    font-weight:bold;
+    text-transform: uppercase;
+}
+nav ul li a:hover{
+    color:#f9004d;
+    transition: .4s;
+}
+.btn{
+    background-color: #f9004d;
+    color: white;
+    text-decoration: transparent;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: transform .4s;
+}
+.btn:hover{
+    transform: scale(1.2);
+}
+hr{
+    size:3px;
+}
+.collapsible {
+  background-color:white;
+  color:#f90000;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 20px;
+
+}
+
+.active, .collapsible:hover {
+  background-color: #9f9c9c;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color:#f90000;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+</style>
+</head>
+<body>
+  <div class="haa">
+    <nav>
+        <h2 class="logo">Donate<span>Ease</span></h2>
+        <ul>
+            <li><a href="index.html">Home</a> </li>
+            <li><a href="donate.html">Donate</a> </li>
+            <li><a href="about.html">About Us</a> </li>
+            <li><a href="faq.html">FAQs</a> </li>
+            <li><a href="contact.html">Contact Us</a> </li></ul>
+            <!-- <a href="login.html" class="btn">LOGIN/REGISTER</a> -->
+    </nav>
+    <br>
+    <hr> <br><br><br>
+<h2>FREQUENTLY ASKED QUESTIONS</h2><br>
+<button class="collapsible">What is Donate Ease?</button>
+<div class="content">
+  <p>Donate is a user-friendly online platform which works as a bridge between willing donors and Organizations. Serve The Needy itself does not need or take any donated items. It simply connects Donors with Organizations. Every Donor wants to make sure that whatever they wish to donate reaches to those who are genuinely in need and Organizations too are constantly in search of generous donors who can help and support them in their efforts. Serve The Needy is the missing link which helps in filling this gap and serves both the purposes of finding an Organizations genuinely in need of help and generous donors who are looking to provide that help.</p>
+</div><hr>
+<button class="collapsible">Why should I trust Donate Ease?</button>
+<div class="content">
+  <p>Donate Ease is one of its kind platform, which brings in a new layer of trust and transparency in the donations made to social organisations by delivering products directly to them instead of giving money. We have added these unique features on our platform where transparency is given utmost importance.</p>
+</div><hr>
+<button class="collapsible">In which cities are you operating?</button>
+<div class="content">
+  <p>We are a digital platform operating all over the state of Andhra Pradesh. As far as the logistics part is concerned, we are currently helping with the pickup and drop facility to Oranizations located in and around Visakhaptnam.</p>
+</div><hr>
+<button class="collapsible">Why Donate Ease is better than other platforms ?</button>
+<div class="content">
+  <p>Unlike other platforms which charges more than 10-15% as commission, Donate Ease is completely free for both Donor and Organizations. The platform discards traditional monetary donations and ensures that the Organizations get the products they need. This makes the donor rest assured that their donation has gone to the needy. The tracking service and the updates is what adds to the uniqueness of this platforms.</p>
+</div><hr>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
+</body>
+</html>

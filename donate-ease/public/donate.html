@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fontawesome-iconpicker/3.2.0/js/fontawesome-iconpicker.min.js" integrity="sha512-7dlzSK4Ulfm85ypS8/ya0xLf3NpXiML3s6HTLu4qDq7WiJWtLLyrXb9putdP3/1umwTmzIvhuu9EW7gHYSVtCQ==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://kit.fontawesome.com/3f8737cf61.js" crossorigin="anonymous"></script>
+        <style>
+            *{
+    padding:0;
+    margin:0;
+    font-family: 'Josefin Sans',sans-serif;
+    box-sizing:border-box;
+}
+.haa{
+    height:100vh;
+    width:100%;
+    background-size: cover;
+    background-position: center;
+}nav{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 45px;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+.logo{
+    color:black;
+    font-size: 35px;
+    letter-spacing: 1px;
+    cursor:pointer;
+    text-transform: uppercase;
+}
+span{
+    color:#f9004d;
+}
+nav ul li{
+    list-style-type:none;
+    display: inline-block;
+    padding:10px 25px
+}
+nav ul li a{
+    color:black;
+    text-decoration: none;
+    font-weight:bold;
+    text-transform: uppercase;
+}
+nav ul li a:hover{
+    color:#f9004d;
+    transition: .4s;
+}
+.btn{
+    background-color: #f9004d;
+    color: white;
+    text-decoration: transparent;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: transform .4s;
+}
+.btn:hover{
+    transform: scale(1.2);
+}
+hr{
+    size:3px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
+.f1{
+    width:600px;
+    height: 55px;
+    display: flex;
+    border:solid 2px black;
+    border-radius: 5px;
+  
+}
+.f1 input{
+    flex:1;
+  outline:none;
+  border:none;
+}
+.f1 ::placeholder{
+    color:black;
+}
+.f1 button{
+    background: #f9004d;
+    padding: 10px 50px;
+    border:none;
+    outline:none;
+    color:#fff;
+    letter-spacing: 1px;
+    cursor:pointer;
+}
+.f1 .fa-search{
+    align-self: center;
+    padding: 20px 20px;
+    color:#f9004d;
+}
+.tab{
+    width:90%;
+    margin-left:auto;
+    margin-right: auto;
+    height:50vh;
+  border:2px solid;
+  border-color: black;
+  border-radius: 4px;
+  
+}
+.tab .text{
+    font-size: 35px;
+    text-align:center;
+
+}
+.tab .text a{
+    text-decoration: none;
+    color:black;
+}
+.tab .text a:hover{
+color:#f9004d;
+}
+.logo1{
+    height: 65px;
+    padding:2px 10px;
+}
+.f2{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo2{
+    width:100px;
+    height: 75px;
+    padding:5px 10px;
+}
+.v1{
+    text-transform:capitalize;
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: justify;
+}
+.fullstop{
+    text-decoration: none;
+    color:black;
+}
+.btn1{
+    background-color: #f9004d;
+    color: white;
+    text-decoration: transparent;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+}
+#btn1 button {
+    background-color: #f9004d;
+    color: white;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.4s, transform 0.4s;
+}
+
+#btn1 button:hover {
+    background-color: #d5003a; /* You can adjust this color for the hover effect */
+    transform: scale(1.2);
+}
+
+        </style>
+    </head>
+    <body>
+        <div class="haa">
+            <nav>
+                <h2 class="logo">Donate<span>Ease</span></h2>
+                <ul>
+                    <li><a href="index.html">Home</a> </li>
+                    <li><a href="#">Donate</a> </li>
+                    <li><a href="about.html">About Us</a> </li>
+                    <li><a href="faq.html">FAQs</a> </li>
+                    <li><a href="contact.html">Contact Us</a> </li></ul>
+                    <a href="login.html" id="btn" class="btn">LOGIN/REGISTER</a>
+                    <a href="" id="btn1" class="btn"><button id="handlelogout">LOGOUT</button></a>
+            </nav>
+            <br>
+            <hr> <br>
+            <div class="container" class="search-bar">
+           <form action="" class="f1">
+            <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search nearby areas?" name="q">
+                    <button type="submit">SEARCH</button>
+                </form>  
+            </div>
+            <br><br>
+            <div class="tab">
+                <table>
+                    <br>
+                    <div class="f2">
+                    <div class="image">
+                    <img src="https://ashrayafoundationbelagavi.org/wp-content/uploads/2021/06/cropped-logo-3.png" class="logo1"></div>
+                    <div class="text">
+                    <p><a href="ashraya.html"> ASHRAYA FOUNDATION </a><br></p></div></div>
+                    <br>
+                    <p class="v1"><strong>ADDRESS:</strong> DNO.1-10-27/32,Begumpeta,Hyderabad-500016<br><br>
+                        Ashraya Orphanage Home, our mission is to improve the lives of orphans and underprivileged children in our community. 
+                        We believe that every child deserves access to education, healthcare, and a safe and nurturing environment.
+                         Our goal is to empower these children to break the cycle of poverty and build a brighter future for themselves and their communities.
+                   <a href="ashraya.html" class="fullstop">To know more.....</a><br>
+                  <br> <strong>OFFICIAL-WEBSITE:</strong><a href="https://ashrayafoundationbelagavi.org/">https://ashrayafoundationbelagavi.org/</a> <br><br><br>
+                    <a href="ashrdonate.html" class="btn1">DONATE</a>
+                    </p>
+                </table>
+            </div>
+            <br><br>
+            <div class="tab">
+                <table>
+                    <br>
+                    <div class="f2">
+                    <div class="image">
+                    <img src="https://i.ibb.co/vjgFqPV/Picsart-23-04-11-19-39-10-020.jpg" class="logo2"></div>
+                    <div class="text">
+                    <p> <a href="amma.html"> AMMA FOUNDATION</a><br> </p></div> </div><br>
+                    <p class="v1"><strong>Address:</strong> Door No 1-11-15, Balaga Mettu,Srikakulam Ho, Srikakulam - 532001<br><br>
+                    Our mission is to provide a safe and nurturing home for orphaned and abandoned children, 
+                    while also empowering them with the education and life skills necessary to lead successful and fulfilling lives.
+                       <a href="amma.html" class="fullstop">To know more.....</a><br>
+                      <br> <strong>OFFICIAL-WEBSITE:</strong><a href="https://www.justdial.com/Srikakulam/Amma-Foundation-Near-Uttereshwar-Temple-Srikakulam-Ho/9999P8942-8942-100910175004-I8H2_BZDET">
+                        https://www.justdial.com/Srikakulam/Amma-Foundation-Near-Uttereshwar-Temple-Srikakulam-Ho/9999P8942-8942-100910175004-I8H2_BZDET</a> <br><br><br>
+                        <a href="ammadonate.html" class="btn1">DONATE</a>
+                        </p>
+                </table>
+            </div>
+          
+        </div>    
+        <script type="module">
+             import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+
+import { getAuth, onAuthStateChanged,signOut} from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
+
+//Authentication with firebase
+const firebaseConfig = {
+  apiKey: "AIzaSyCKvJ8oE7mC4vdzdBUoP0PqtOtGsdkTUn4",
+  authDomain: "donate-ease-fd195.firebaseapp.com",
+  projectId: "donate-ease-fd195",
+  storageBucket: "donate-ease-fd195.appspot.com",
+  messagingSenderId: "30329555430",
+  appId: "1:30329555430:web:7b786e8bb11e19d1202e27",
+  measurementId: "G-8D6WZ7RZ1S"
+};
+const app = initializeApp(firebaseConfig);
+const auth = getAuth();
+const btn=document.getElementById("btn");
+const btn1=document.getElementById("btn1");
+onAuthStateChanged(auth, (user) => {
+        if (user) {
+          btn.style.display="none";
+          btn1.style.display="block";
+        } else {
+          btn.style.display="block";
+          btn1.style.display="none";
+          
+        }
+      });
+      const handlelog=document.getElementById("handlelogout");   handlelog.addEventListener("click",()=>{
+        signOut(auth).then(() => {
+        console.log("logged-out");
+    }).catch((error) => {
+      console.log(error);
+     });
+  })
+        </script>
+    </body>
+</html>

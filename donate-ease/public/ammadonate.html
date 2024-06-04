@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Orphanage Donation Form</title>
+	<style>
+		form {
+			width: 50%;
+			margin: auto;
+			padding: 20px;
+			background-color: #f7f7f7;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+			border-radius: 10px;
+		}
+
+		h1 {
+			text-align: center;
+			font-size: 36px;
+			margin-bottom: 20px;
+		}
+
+		label {
+			display: block;
+			font-size: 20px;
+			margin-bottom: 10px;
+		}
+
+		input,
+		select {
+			width: 100%;
+			padding: 10px;
+			font-size: 18px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			box-sizing: border-box;
+			margin-bottom: 20px;
+		}
+
+		textarea {
+			width: 100%;
+			padding: 10px;
+			font-size: 18px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			box-sizing: border-box;
+			margin-bottom: 20px;
+			resize: vertical;
+		}
+
+		input[type="submit"] {
+			background-color: #4CAF50;
+			color: #fff;
+			font-size: 24px;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+
+		input[type="submit"]:hover {
+			background-color: #3e8e41;
+		}
+
+		.img {
+			width: 300px;
+			height: 200px;
+			border-radius: 50%;
+			object-fit: cover;
+			object-position: center;
+			margin-left: 230px;
+		}
+
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f0f0f0;
+		}
+
+		form {
+			width: 80%;
+			max-width: 500px;
+			margin: 50px auto;
+			padding: 30px;
+			background-color: #fff;
+			box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+			border-radius: 10px;
+		}
+
+		h1 {
+			text-align: center;
+			font-size: 36px;
+			margin-bottom: 30px;
+			color: #4CAF50;
+		}
+
+		label {
+			display: block;
+			font-size: 20px;
+			margin-bottom: 10px;
+			color: #333;
+		}
+
+		input,
+		select,
+		textarea {
+			width: 100%;
+			padding: 10px;
+			font-size: 18px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			box-sizing: border-box;
+			margin-bottom: 20px;
+			outline: none;
+			transition: border-color 0.3s;
+		}
+
+		input:focus,
+		select:focus,
+		textarea:focus {
+			border-color: #4CAF50;
+		}
+
+		select {
+			appearance: none;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			background: url('https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-down-01-512.png') no-repeat right center;
+			background-size: 20px;
+		}
+
+		textarea {
+			resize: vertical;
+		}
+
+		input[type="submit"] {
+			background-color: #4CAF50;
+			color: #fff;
+			font-size: 24px;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: background-color 0.3s;
+		}
+
+		input[type="submit"]:hover {
+			background-color: #45a049;
+		}
+
+		.img {
+			display: block;
+			width: 150px;
+			height: 150px;
+			margin: 0 auto 20px;
+			border-radius: 50%;
+			object-fit: cover;
+			object-position: center;
+			box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+		}
+
+		/* Styling for online website effect */
+		form {
+			background-color: #f9f9f9;
+			border: 1px solid #e0e0e0;
+		}
+
+		input,
+		select,
+		textarea {
+			border: 1px solid #d2d2d2;
+			background-color: #f7f7f7;
+			color: #333;
+		}
+
+		input[type="submit"] {
+			background-color: #007bff;
+		}
+
+		input[type="submit"]:hover {
+			background-color: #0056b3;
+		}
+
+		input[type="submit"]:focus {
+			outline: none;
+			box-shadow: 0px 0px 5px rgba(0, 0, 255, 0.5);
+		}
+
+		.img {
+			border: 5px solid #fff;
+		}
+
+		form {
+			max-width: 600px;
+			padding: 40px;
+			margin: 50px auto;
+			box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+			border-radius: 10px;
+		}
+
+		input,
+		select,
+		textarea {
+			padding: 12px;
+			border: 2px solid #d2d2d2;
+			background-color: #f7f7f7;
+			color: #333;
+			transition: border-color 0.3s, background-color 0.3s;
+		}
+
+		input:focus,
+		select:focus,
+		textarea:focus {
+			border-color: #4CAF50;
+			background-color: #fff;
+		}
+
+		select {
+			background-position: right 12px center;
+			background-size: 14px;
+		}
+
+		input[type="submit"] {
+			background-color: #4CAF50;
+			color: #fff;
+			font-size: 24px;
+			padding: 12px 24px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+			transition: background-color 0.3s, box-shadow 0.3s;
+		}
+
+		input[type="submit"]:hover {
+			background-color: #45a049;
+			box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+		}
+
+		input[type="submit"]:focus {
+			outline: none;
+		}
+
+		.img {
+			border: 5px solid #fff;
+			transition: transform 0.3s;
+		}
+
+		.img:hover {
+			transform: scale(1.1);
+		}
+
+		input:focus,
+		select:focus,
+		textarea:focus {
+			border-color: #4CAF50;
+			background-color: #fff;
+			box-shadow: 0px 0px 5px rgba(76, 175, 80, 0.5);
+		}
+
+		/* Remove default outline on form elements */
+		input:focus,
+		select:focus,
+		textarea:focus,
+		button:focus {
+			outline: none;
+		}
+
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f0f0f0;
+			background-image: url("https://images.unsplash.com/photo-1520651089186-916c5e5e2acb");
+			/* Replace with your image URL */
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center center;
+		}
+
+		/* ... (existing CSS code) ... */
+
+		/* Styling for online website effect (continued) */
+		form {
+			max-width: 600px;
+			padding: 40px;
+			margin: 50px auto;
+			box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+			border-radius: 10px;
+			background-color: rgba(255, 255, 255, 0.9);
+		}
+
+		body {
+			background-color: #f0f0f0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 100vh;
+			margin: 0;
+		}
+
+		form {
+			width: 90%;
+			max-width: 500px;
+			padding: 30px;
+			background-color: #fff;
+			box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+			border-radius: 10px;
+		}
+
+		h1 {
+			text-align: center;
+			font-size: 36px;
+			margin-bottom: 20px;
+			color: #4CAF50;
+		}
+
+		label {
+			display: block;
+			font-size: 18px;
+			margin-bottom: 8px;
+			color: #333;
+		}
+
+		input,
+		select,
+		textarea {
+			width: 100%;
+			padding: 12px;
+			font-size: 16px;
+			border: 2px solid #d2d2d2;
+			background-color: #f7f7f7;
+			color: #333;
+			border-radius: 5px;
+			box-sizing: border-box;
+			margin-bottom: 20px;
+			outline: none;
+			transition: border-color 0.3s, background-color 0.3s;
+		}
+
+		input:focus,
+		select:focus,
+		textarea:focus {
+			border-color: #4CAF50;
+			background-color: #fff;
+		}
+
+		select {
+			appearance: none;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			background: url('https://cdn3.iconfinder.com/data/icons/faticons/32/arrow-down-01-512.png') no-repeat right center;
+			background-size: 14px;
+			padding-right: 30px;
+		}
+
+		textarea {
+			resize: vertical;
+		}
+
+		input[type="submit"] {
+			background-color: #4CAF50;
+			color: #fff;
+			font-size: 20px;
+			padding: 12px 24px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+			transition: background-color 0.3s, box-shadow 0.3s;
+		}
+
+		input[type="submit"]:hover {
+			background-color: #45a049;
+			box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+		}
+
+		input[type="submit"]:focus {
+			outline: none;
+		}
+
+		.img {
+			display: block;
+			width: 150px;
+			height: 150px;
+			margin: 0 auto 20px;
+			border-radius: 50%;
+			object-fit: cover;
+			object-position: center;
+			box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+			transition: transform 0.3s;
+		}
+
+		.img:hover {
+			transform: scale(1.1);
+		}
+
+		/* Styling for the header background color */
+		header {
+			background-color: #4CAF50;
+			padding: 10px;
+			text-align: center;
+			color: #fff;
+			border-radius: 10px 10px 0 0;
+		}
+	</style>
+</head>
+
+<body>
+	<form id="ammadonation" action="#" method="post">
+		<img src="https://i.ibb.co/vjgFqPV/Picsart-23-04-11-19-39-10-020.jpg" alt="" class="img">
+		<h1>AMMA FOUNDATION</h1>
+		<label for="donorname">Name:</label>
+		<input type="text" id="donorname" name="donorname" required>
+		<label for="donormobile">Mobile Number:</label>
+		<input type="tel" id="donormobile" name="donormobile" required>
+		<label for="donoraddress">Address:</label>
+		<textarea id="donoraddress" name="donoraddress" rows="5" required></textarea>
+		<label for="donationtype">Donation Type:</label>
+		<select id="donationtype" name="donationtype">
+			<option value="books">Books</option>
+			<option value="clothes">Clothes</option>
+			<option value="food">Food</option>
+			<option value="gadgets">Gadgets</option>
+		</select>
+		
+		<label for="donationdetails">Details:</label>
+		<textarea id="donationdetails" name="donationdetails" rows="5" required></textarea>
+		<button type="submit">Donate</button>
+	</form>
+	<script type="module" src="ammadonate.js"></script>
+</body>
+
+</html>

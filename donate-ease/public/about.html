@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>About Us</title>
+  <style>
+  nav {
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+  nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    list-style: none;
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: #333;
+    text-decoration: none;
+    padding: 5px;
+  }
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 0;
+}
+
+.main-content h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.main-content p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+*{
+padding:0;
+margin:0;
+font-family: 'Josefin Sans',sans-serif;
+box-sizing:border-box;
+}
+.haa{
+height:100%;
+width:100%;
+background-size: cover;
+background-position: center;
+}
+.r1{
+display:flex;
+align-items: center;
+justify-content: space-between;
+padding-top: 45px;
+padding-left: 8%;
+padding-right: 8%;
+}
+.logo{
+color:black;
+font-size: 35px;
+letter-spacing: 1px;
+cursor:pointer;
+text-transform: uppercase;
+}
+span{
+color:#f9004d;
+}
+.r1 ul li{
+list-style-type:none;
+display: inline-block;
+padding:10px 25px
+}
+.r1 ul li a{
+color:black;
+text-decoration: none;
+font-weight:bold;
+text-transform: uppercase;
+}
+.r1 ul li a:hover{
+color:#f9004d;
+transition: .4s;
+}
+.btn{
+background-color: #f9004d;
+color: white;
+text-decoration: transparent;
+border: 2px solid transparent;
+font-weight: bold;
+padding: 10px 25px;
+border-radius: 30px;
+transition: transform .4s;
+}
+.btn:hover{
+transform: scale(1.2);
+}
+hr{
+size:3px;
+}
+#about{
+  padding-left: 20px;
+}
+
+</style>
+</head>
+<body>
+		<div class="haa">
+      <nav class="r1">
+          <h2 class="logo">Donate<span>Ease</span></h2>
+          <ul>
+              <li><a href="index.html">Home</a> </li>
+              <li><a href="donate.html">Donate</a> </li>
+              <li><a href="#">About Us</a> </li>
+              <li><a href="faq.html">FAQs</a> </li>
+              <li><a href="contact.html">Contact Us</a> </li></ul>
+              <!-- <a href="login.html" class="btn">LOGIN/REGISTER</a> -->
+      </nav>
+      <hr>
+		<div class="burger">
+			<div class="line1"></div>
+			<div class="line2"></div>
+			<div class="line3"></div>
+		</div>
+    <br><br>
+	<main>
+		<section id="about">
+			<h1><b>About Orphanage Donation</b></h1><br><br>
+			<p>At Orphanage Donation, we are dedicated to improving the lives of children in need. Our mission is to provide support to orphanages and other organizations that serve disadvantaged children around the world.</p>
+<br>
+			<p>We believe that every child deserves a safe and nurturing environment in which to grow and thrive. Unfortunately, many children around the world do not have access to the basic necessities of life, including food, clothing, and education. That's where Orphanage Donation comes in.</p>
+<br>
+			<p>Through our online platform, donors can easily contribute to our partner orphanages and organizations. Whether you want to donate clothes, books, toys, or money, every contribution helps make a difference in the lives of children in need.</p>
+<br>
+			<p>We work closely with our partner organizations to ensure that donations are distributed where they are needed most. Our goal is to provide assistance that is both effective and sustainable, so that children can continue to benefit from our support in the long term.</p>
+<br>
+		
+<p>Join us in our mission to improve the lives of children in need. Together, we can make a difference and create a brighter future for the next generation.</p>
+<br>
+</section>
+	</main>
+  <br><br><br><br><br><br><br><br><br><br><br><br>
+	<footer>
+	
+			<p>Copyright &copy; Donate Now
+			</p>
+
+	</footer>
+	
+	<script >// Get elements from the DOM
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        // Add event listener to toggle button
+        navToggle.addEventListener('click', () => {
+          navMenu.classList.toggle('show');
+        });
+        
+        // Smooth scrolling when clicking on anchor links
+        const anchorLinks = document.querySelectorAll('a[href^="#"]');
+        
+        for (let anchorLink of anchorLinks) {
+          anchorLink.addEventListener('click', (e) => {
+            e.preventDefault();
+        
+            const targetId = anchorLink.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+        
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+          });
+        }
+        </script>
+</body>
+</html>

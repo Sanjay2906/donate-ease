@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Donate Ease</title>
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <header class="header">   
+    <nav class="navbar navbar-style">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse"  data-target="#menuicon">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href=""><img class="logo" src="https://tse1.mm.bing.net/th?id=OIP.DOwfXJIxBr5tUS2N83kM9QHaE7&pid=Api&rs=1&c=1&qlt=95&w=151&h=100"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="menuicon">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="index.html">Home</a></li>
+            <li id="login"> <a  href="login.html">LOGIN</a></li>
+            <li id="register"><a  href="register.html">REGISTER</a></li>
+            <li id="logout"><a><button class="logout" id="handlelogout">Logout</button></a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="row">
+      <div class="col-sm-8">
+      </div>
+      <div class="col-sm-4 banner-info">
+        <p class="big-text" >DONATE EASE</p>
+        <a id="donatelink"class="btn btn-first" href="donate.html" id="donate-btn">Donate</a>
+      </div>
+    </div>
+  </header>
+  <main class="middle">
+    <marquee behavior="scroll">GIVING IS THE GREATEST ACT OF GRACE</marquee>
+  </main>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+
+import { getAuth, onAuthStateChanged,signOut} from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
+
+//Authentication with firebase
+const firebaseConfig = {
+  apiKey: "AIzaSyCKvJ8oE7mC4vdzdBUoP0PqtOtGsdkTUn4",
+  authDomain: "donate-ease-fd195.firebaseapp.com",
+  projectId: "donate-ease-fd195",
+  storageBucket: "donate-ease-fd195.appspot.com",
+  messagingSenderId: "30329555430",
+  appId: "1:30329555430:web:7b786e8bb11e19d1202e27",
+  measurementId: "G-8D6WZ7RZ1S"
+};
+const app = initializeApp(firebaseConfig);
+const auth = getAuth();
+const donate=document.getElementById("donatelink");
+const login=document.getElementById("login");
+          const register=document.getElementById("register");
+          const logout=document.getElementById("logout");
+      onAuthStateChanged(auth, (user) => {
+        if (user) {
+          login.style.display="none";
+          register.style.display="none";
+          logout.style.display="block";    
+          donate.href="donate.html";
+        } else {
+          login.style.display="block";
+          register.style.display="block";
+          logout.style.display="none";
+          donate.href="login.html";
+        }
+      });
+      const handlelog=document.getElementById("handlelogout");   
+      handlelog.addEventListener("click",()=>{
+        signOut(auth).then(() => {
+        console.log("logged-out");
+    }).catch((error) => {
+      console.log(error);
+     });
+  })
+  </script>
+</body>
+</html>
